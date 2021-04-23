@@ -1,0 +1,17 @@
+# main.py
+number=[3,4,5,6,7,2,1,9,4,7,7,2]
+def quickSort(number,partition):
+  lesser=[]
+  equal=[]
+  greater=[]
+  for i in range(len(number)):
+    if number[i]==partition:
+      equal.append(number[i])
+    elif number[i]<partition:
+      lesser.append(number[i])
+    elif number[i]>partition:
+      greater.append(number[i])
+  return lesser, equal, greater
+  
+print(quickSort(number,7))
+      
